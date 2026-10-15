@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <title>SilkiTech</title>
   <g transform="translate(32 32) rotate(30) scale(1.16) translate(-32 -32)">
-    <rect x="11" y="21" width="11" height="28" rx="5.5" fill="#245DE6"/>
-    <rect x="26.5" y="9" width="11" height="46" rx="5.5" fill="#102449"/>
-    <rect x="42" y="15" width="11" height="26" rx="5.5" fill="#245DE6"/>
+    <rect x="11" y="21" width="11" height="28" rx="5.5" fill="#0A0A0A" opacity=".55"/>
+    <rect x="26.5" y="9" width="11" height="46" rx="5.5" fill="#0A0A0A"/>
+    <rect x="42" y="15" width="11" height="26" rx="5.5" fill="#0A0A0A" opacity=".55"/>
   </g>
 </svg>
