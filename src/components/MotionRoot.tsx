@@ -15,7 +15,7 @@ export function MotionRoot({ children }: { children: React.ReactNode }) {
         entry.target.classList.add('is-visible');
         io.unobserve(entry.target);
       }
-    }, { threshold: 0.14, rootMargin: '0px 0px -10% 0px' });
+    }, { threshold: 0.05, rootMargin: '0px 0px -4% 0px' });
     nodes.forEach(el => io.observe(el));
     return () => io.disconnect();
   }, []);

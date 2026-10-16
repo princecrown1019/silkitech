@@ -1,13 +1,11 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { Menu, X } from 'lucide-react';
 import { LogoMark } from '@/components/LogoMark';
 
 const links = [
-  {href:'#services',label:'Services'},
-  {href:'#about',label:'About'},
-  {href:'#approach',label:'Approach'},
-  {href:'#expertise',label:'Expertise'},
+  {href:'#work',label:'Work'},
+  {href:'#studio',label:'Studio'},
+  {href:'#plan',label:'Process'},
 ];
 
 export function Header() {
@@ -22,16 +20,21 @@ export function Header() {
   return <header className={scrolled ? 'site-header is-scrolled' : 'site-header'}>
     <div className="shell nav-shell">
       <a href="#top" className="brand" aria-label="SilkiTech homepage">
-        <LogoMark/>
+        <LogoMark size={28}/>
         <span>SILKITECH</span>
       </a>
       <nav className={open ? 'nav-links open' : 'nav-links'} aria-label="Main navigation">
         {links.map(item => <a key={item.href} href={item.href} onClick={()=>setOpen(false)}>{item.label}</a>)}
-        <a className="mobile-contact" href="mailto:info@silkitech.com">Contact</a>
+        <a className="mobile-contact" href="#contact" onClick={()=>setOpen(false)}>Contact</a>
       </nav>
-      <a className="nav-cta" href="mailto:info@silkitech.com?subject=Let%27s%20talk%20about%20a%20project">Contact</a>
-      <button className="menu-toggle" onClick={()=>setOpen(v=>!v)} aria-label={open?'Close menu':'Open menu'} aria-expanded={open}>
-        {open ? <X size={22}/> : <Menu size={22}/>}
+      <a className="nav-cta" href="#contact">Contact</a>
+      <button
+        className={open ? 'menu-toggle is-open' : 'menu-toggle'}
+        onClick={()=>setOpen(v=>!v)}
+        aria-label={open?'Close menu':'Open menu'}
+        aria-expanded={open}
+      >
+        <span className="burger"/>
       </button>
     </div>
   </header>;
